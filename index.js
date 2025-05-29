@@ -2,31 +2,21 @@ import express from "express";
 
 const app = express();
 
-const PORT = 5000;
+const PORT = 5001;
 
-// REGISTRATION SERVICE
-app.post("/registration", (req, res) => {
-  res.send("<html><body>INSIDE REGISTRATION API... </body></html>");
+// SUBMIT ASSIGNMENT SERVICE
+app.post("/submit", (req, res) => {
+  res.send("<html><body>INSIDE SUBMIT ASSIGNMENT API...</body></html>");
 });
 
-// LOGIN SERVICE
-app.post("/login", (req, res) => {
-  res.send("<html><body>INSIDE LOGIN API... </body></html>");
+// VIEW ASSIGNMENT SERVICE
+app.get("/view", (req, res) => {
+  res.send("<html><body>INSIDE VIEW ASSIGNMENT API...</body></html>");
 });
 
-// SEARCH SERVICE
-app.get("/search", (req, res) => {
-  res.send("<html><body>INSIDE SEARCH API... </body></html>");
-});
-
-// UPDATE PROFILE SERVICE
-app.put("/updateprofile", (req, res) => {
-  res.send("<html><body>INSIDE UPDATE PROFILE API... </body></html>");
-});
-
-// DELETE USER SERVICE
-app.delete("/delete-user", (req, res) => {
-  res.send("<html><body>INSIDE DELETE API... </body></html>");
+// EDIT PROFILE SERVICE
+app.put("/edit", (req, res) => {
+  res.send("<html><body>INSIDE EDIT PROFILE API...</body></html>");
 });
 
 app.listen(PORT, () => {
